@@ -1,0 +1,53 @@
+nolan
+------------------------------------------
+This is a version of the Nolan-chart quiz, aka "the world's smallest
+political quiz", for VDTs with color.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libncurses8-5.5-3
+
+Build requirements:
+  binutils-20080624-2
+  cygport-0.4.0-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical homepage:
+  http://www.catb.org/~esr/nolan/
+
+------------------------------------
+
+Build instructions:
+  unpack nolan-1.3-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./nolan-1.3-X.cygport all
+
+This will create:
+  /usr/src/nolan-1.3-X-src.tar.bz2
+  /usr/src/nolan-1.3-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro
+
+  /usr/bin/nolan.exe
+  /usr/share/doc/nolan-1.3/COPYING
+  /usr/share/doc/nolan-1.3/README
+  /usr/share/man/man1/nolan.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.3-2 -----
+Rebuilt for ncurses-5.5.
+
+----- version 1.3-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

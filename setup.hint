@@ -1,0 +1,9 @@
+category: Games
+requires: cygwin libncurses8
+sdesc: "World's smallest political quiz"
+ldesc: "This is a version of the Nolan-chart quiz, aka 'the world's 
+smallest political quiz', for VDTs with color."
+
+
+
+
