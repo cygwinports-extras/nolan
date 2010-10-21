@@ -1,12 +1,13 @@
 DESCRIPTION="Nolan-chart political quiz"
 HOMEPAGE="http://www.catb.org/~esr/${PN}/"
 SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
+PATCH_URI="1.4-ncurses.h.patch"
 
 src_compile() {
 	lndirs
 	cd ${B}
 	PATH="${B}:${PATH}"
-	cygmake CFLAGS="${CFLAGS} -DSIGIOT=SIGABRT \$(SYSTYPE)"
+	cygmake CFLAGS="${CFLAGS} -I/usr/include/ncurses -DSIGIOT=SIGABRT \$(SYSTYPE)" LDFLAGS=
 }
 
 src_install() {

@@ -1,0 +1,29 @@
+nolan.o: In function `display':
+nolan.c:190: undefined reference to `_LINES'
+nolan.o: In function `screenend':
+nolan.c:370: undefined reference to `_COLS'
+nolan.c:370: undefined reference to `_LINES'
+nolan.o: In function `lef_screen':
+script.h:239: undefined reference to `_COLS'
+nolan.o:script.h:139: more undefined references to `_COLS' follow
+
+nolan.c:21:13: error: two or more data types in declaration specifiers
+nolan.c:21:1: warning: useless type name in empty declaration
+
+--- origsrc/nolan-1.4/nolan.c	2010-10-20 16:07:26.000000000 -0500
++++ src/nolan-1.4/nolan.c	2010-10-21 00:59:27.296435400 -0500
+@@ -11,13 +11,13 @@
+ #include <ctype.h>
+ #include <assert.h>
+ #include <stdlib.h>
++#include <ncurses.h>
+ 
+ #include "screen.h"
+ 
+ #define CONTINUE	"Press any key to continue..."
+ #define FINISH		"Press any key to finish..."
+ 
+-typedef int	bool;
+ #define TRUE	1
+ #define FALSE	0
+ 
