@@ -1,0 +1,23 @@
+NAME="nolan"
+VERSION=1.4
+RELEASE=1
+CATEGORY="Games"
+SUMMARY="World's smallest political quiz"
+DESCRIPTION="This is a version of the Nolan-chart quiz, aka the world's
+smallest political quiz, for VDTs with color."
+HOMEPAGE="http://www.catb.org/~esr/nolan/"
+SRC_URI="http://www.catb.org/~esr/nolan/nolan-${VERSION}.tar.gz"
+PATCH_URI="1.4-ncurses.h.patch"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	PATH="${B}:${PATH}"
+	cygmake CFLAGS="${CFLAGS} -I/usr/include/ncurses -DSIGIOT=SIGABRT \$(SYSTYPE)" LDFLAGS=
+}
+
+src_install() {
+	cd ${B}
+	dobin nolan.exe
+	doman nolan.1
+}
