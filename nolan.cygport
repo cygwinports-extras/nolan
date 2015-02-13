@@ -1,6 +1,6 @@
 NAME="nolan"
 VERSION=1.4
-RELEASE=1
+RELEASE=2
 CATEGORY="Games"
 SUMMARY="World's smallest political quiz"
 DESCRIPTION="This is a version of the Nolan-chart quiz, aka the world's
@@ -13,7 +13,7 @@ src_compile() {
 	lndirs
 	cd ${B}
 	PATH="${B}:${PATH}"
-	cygmake CFLAGS="${CFLAGS} -I/usr/include/ncurses -DSIGIOT=SIGABRT \$(SYSTYPE)" LDFLAGS=
+	cygmake CFLAGS="${CFLAGS} -DSIGIOT=SIGABRT \$(SYSTYPE)" LDFLAGS=
 }
 
 src_install() {
